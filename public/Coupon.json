@@ -1,0 +1,217 @@
+[
+  {
+    "_id": "1",
+    "brand_name": "Daraz",
+    "rating": 4.5,
+    "description": "Exclusive discounts on various categories",
+    "brand_logo": "https://i.pinimg.com/736x/7f/39/91/7f399188b3ca4ae4c7c04ab154359ffe.jpg",
+    "shop_Link": "https://www.daraz.com.bd",
+    "category": "E-commerce",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "DARAZ20",
+        "description": "20% off on electronics",
+        "expiry_date": "2024-12-31",
+        "condition": "Minimum purchase 500 BDT",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "DARAZ50",
+        "description": "50 BDT off on your first order",
+        "expiry_date": "2024-11-30",
+        "condition": "For new customers only",
+        "coupon_type": "fixed"
+      }
+    ]
+  },
+  {
+    "_id": "2",
+    "brand_name": "Foodpanda",
+    "rating": 4.8,
+    "description": "Get your favorite food delivered fast",
+    "brand_logo": "https://i.pinimg.com/736x/99/59/24/995924934504adab7c1a9780bad8319c.jpg",
+    "shop_Link": "https://www.foodpanda.com.bd",
+    "category": "Food Delivery",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "FPNEW100",
+        "description": "100 BDT off for new users",
+        "expiry_date": "2024-11-30",
+        "condition": "For new customers only",
+        "coupon_type": "fixed"
+      },
+      {
+        "coupon_code": "FPMEAL25",
+        "description": "25% off on combo meals",
+        "expiry_date": "2024-12-15",
+        "condition": "Minimum purchase 300 BDT",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "FPLOYAL50",
+        "description": "50 BDT off for loyal customers",
+        "expiry_date": "2024-12-31",
+        "condition": "Available after 5 orders",
+        "coupon_type": "fixed"
+      }
+    ]
+  },
+  {
+    "_id": "3",
+    "brand_name": "Pathao",
+    "rating": 4.3,
+    "description": "Ride-sharing made easier and affordable",
+    "brand_logo": "https://i.pinimg.com/736x/89/29/79/892979d2dafa6d1591d1938548f79071.jpg",
+    "shop_Link": "https://www.pathao.com",
+    "category": "Ride Sharing",
+    "isSaleOn": false,
+    "coupons": [
+      {
+        "coupon_code": "RIDE50",
+        "description": "50 BDT off on your next ride",
+        "expiry_date": "2024-12-31",
+        "condition": "Valid for 2 rides",
+        "coupon_type": "fixed"
+      },
+      {
+        "coupon_code": "SHARE25",
+        "description": "25% off on shared rides",
+        "expiry_date": "2024-12-31",
+        "condition": "Maximum discount 75 BDT",
+        "coupon_type": "percentage"
+      }
+    ]
+  },
+  {
+    "_id": "4",
+    "brand_name": "flipkart",
+    "rating": 4.2,
+    "description": "Bus tickets and more, just a tap away",
+    "brand_logo": "https://i.pinimg.com/736x/08/97/a7/0897a7ca2bade825fc34df1bd2a0dbc5.jpg",
+    "shop_Link": "https://www.shohoz.com",
+    "category": "Travel",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "TRAVEL50",
+        "description": "50% off on bus tickets",
+        "expiry_date": "2024-12-15",
+        "condition": "Maximum discount 200 BDT",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "TRAVELBONUS",
+        "description": "Free snacks on premium buses",
+        "expiry_date": "2024-11-30",
+        "condition": "Applicable for select routes only",
+        "coupon_type": "bonus"
+      }
+    ]
+  },
+  {
+    "_id": "5",
+    "brand_name": "Robi",
+    "rating": 4.6,
+    "description": "Telecommunications and mobile services",
+    "brand_logo": "https://i.pinimg.com/736x/4b/b7/3a/4bb73a40b691b6c97d609803719e05fe.jpg",
+    "shop_Link": "https://www.robi.com.bd",
+    "category": "Telecom",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "ROBI100",
+        "description": "100 BDT off on new mobile connections",
+        "expiry_date": "2024-12-31",
+        "condition": "For new subscribers only",
+        "coupon_type": "fixed"
+      },
+      {
+        "coupon_code": "ROBI30",
+        "description": "30% off on data packs",
+        "expiry_date": "2024-11-30",
+        "condition": "Minimum purchase 100 BDT",
+        "coupon_type": "percentage"
+      }
+    ]
+  },
+  {
+    "_id": "6",
+    "brand_name": "Uber",
+    "rating": 4.7,
+    "description": "Convenient ride-sharing and food delivery",
+    "brand_logo": "https://i.pinimg.com/736x/0c/c5/aa/0cc5aa52439e953a0b05b7bdad2fbd8e.jpg",
+    "shop_Link": "https://www.uber.com",
+    "category": "Ride Sharing",
+    "isSaleOn": false,
+    "coupons": [
+      {
+        "coupon_code": "UBERFREE",
+        "description": "Free ride worth up to 100 BDT",
+        "expiry_date": "2024-12-15",
+        "condition": "For first-time riders only",
+        "coupon_type": "fixed"
+      },
+      {
+        "coupon_code": "UBER25",
+        "description": "25% off on your next ride",
+        "expiry_date": "2024-12-31",
+        "condition": "Minimum ride amount 150 BDT",
+        "coupon_type": "percentage"
+      }
+    ]
+  },
+  {
+    "_id": "7",
+    "brand_name": "Daraz Express",
+    "rating": 4.4,
+    "description": "Fast and reliable delivery service from Daraz",
+    "brand_logo": "https://i.pinimg.com/736x/f3/7a/cb/f37acb75f078094f809c35b5492fa7a4.jpg",
+    "shop_Link": "https://www.daraz.com.bd",
+    "category": "Delivery",
+    "isSaleOn": false,
+    "coupons": [
+      {
+        "coupon_code": "DELIVERY25",
+        "description": "25 BDT off on delivery charges",
+        "expiry_date": "2024-11-30",
+        "condition": "Minimum purchase 500 BDT",
+        "coupon_type": "fixed"
+      },
+      {
+        "coupon_code": "EXPRESS50",
+        "description": "50% off on express delivery",
+        "expiry_date": "2024-12-31",
+        "condition": "For same-day delivery only",
+        "coupon_type": "percentage"
+      }
+    ]
+  },
+  {
+    "_id": "8",
+    "brand_name": "Bikroy",
+    "rating": 4.5,
+    "description": "Buy and sell anything in Bangladesh",
+    "brand_logo": "https://i.pinimg.com/736x/8c/23/ad/8c23adec5b4f8221cbdffc84a82fccc7.jpg",
+    "shop_Link": "https://www.bikroy.com",
+    "category": "Marketplace",
+    "isSaleOn": true,
+    "coupons": [
+      {
+        "coupon_code": "BIKROY10",
+        "description": "10% off on your first purchase",
+        "expiry_date": "2024-12-31",
+        "condition": "For new users only",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "BIKROYFREESHIP",
+        "description": "Free shipping on orders over 1000 BDT",
+        "expiry_date": "2024-12-15",
+        "condition": "Minimum order 1000 BDT",
+        "coupon_type": "bonus"
+      }
+    ]
+  }
+]
