@@ -54,7 +54,7 @@ const Header = () => {
                         {links}
                     </ul>
                 </div>
-                    <Link to="/" className="btn btn-ghost font-bold text-2xl">Discount Pro</Link>
+                    <Link to="/" className="btn btn-ghost font-bold text-2xl animate-bounce text-red-500">Discount Pro</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-3">
@@ -62,7 +62,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-error">Login</a>
+                <Link to="/auth/login" className="btn btn-error">Login</Link>
             </div>
         </div>
     );

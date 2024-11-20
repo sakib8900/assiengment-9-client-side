@@ -5,7 +5,6 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 const BrandDetail = () => {
     const { brand_name, rating, description, brand_logo, shop_Link, category, isSaleOn, coupons } = useLoaderData();
 
-    // Function to generate stars based on the rating
     const renderStars = (rating) => {
         const stars = [];
         for (let i = 1; i <= 5; i++) {
@@ -23,7 +22,7 @@ const BrandDetail = () => {
     return (
         <div className="flex py-10 justify-center items-center min-h-screen bg-gray-100">
             <div className="card w-full md:w-96 bg-base-100 shadow-xl">
-                <figure className="px-10 pt-10">
+                <figure className="p-5">
                     <img src={brand_logo} alt={brand_name} className="rounded-xl" />
                 </figure>
                 <div className="card-body items-center text-center">

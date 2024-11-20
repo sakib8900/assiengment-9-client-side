@@ -18,8 +18,8 @@ const Brand = ({ brand }) => {
         return stars;
     };
     return (
-            <div className="card w-full md:w-96 bg-base-100 shadow-xl">
-                <figure className="px-10 pt-10">
+            <div className="card w-full border-2">
+                <figure className="p-5">
                     <img src={brand_logo} alt={brand_name} className="rounded-xl" />
                 </figure>
                 <div className="card-body items-center text-center">
