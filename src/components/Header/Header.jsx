@@ -4,7 +4,7 @@ import "./Header.css";
 import { AuthContext } from '../../provider/AuthProvider';
 
 const Header = () => {
-    const {user} = useContext(AuthContext)
+    const {user , logout} = useContext(AuthContext)
     // console.log(user && user.name);
     const links = <>
         <NavLink
@@ -65,7 +65,9 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/auth/login" className="btn btn-error">Login</Link>
+                {
+                    user && user?.email ? <button onClick={logout} className="btn btn-error">logout</button> : <Link to="/auth/login" className="btn btn-error">Login</Link>
+                }
             </div>
         </div>
     );

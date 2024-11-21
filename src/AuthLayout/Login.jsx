@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
+    const { userLogin, setUser} = useContext(AuthContext)
+    const [error , setError] = useState({})
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log(location);
     const [passwordVisible, setPasswordVisible] = useState(false);
 
     const handleSubmit = (e) => {
@@ -10,8 +17,19 @@ const Login = () => {
         
         // get data
         const form = new FormData(e.target);
-        const name = form.get("name")
-        console.log(name);
+        const email = form.get("email")
+        const password = form.get("password")
+        console.log({email, password});
+        userLogin(email, password)
+        .then((result) =>{
+            const user = result.user;
+            setUser(user)
+            navigate(location?.state ? location.state : "/")
+            toast.success("login successfully !")
+        })
+        .catch((err) =>{
+            setError({ ...error, login: err.code})
+        })
     };
 
     const togglePasswordVisibility = () => {
@@ -29,6 +47,7 @@ const Login = () => {
                     <div>
                         <label className="block text-sm font-medium text-gray-600">Email Address</label>
                         <input
+                            name="email"
                             type="email"
                             placeholder="Enter your email"
                             className="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-2 focus:ring-pink-400 focus:outline-none"
@@ -40,6 +59,7 @@ const Login = () => {
                     <div className="relative">
                         <label className="block text-sm font-medium text-gray-600">Password</label>
                         <input
+                            name="password"
                             type={passwordVisible ? "text" : "password"}
                             placeholder="Enter your password"
                             className="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-2 focus:ring-pink-400 focus:outline-none"
@@ -53,8 +73,14 @@ const Login = () => {
                             {passwordVisible ? <FaEye /> : <FaEyeSlash />}
                         </button>
                     </div>
-
-                    {/* Remember Me & Forgot Password */}
+                    {
+                        error.login && (
+                            <label className="label text-sm text-red-600">
+                                {error.login}
+                            </label>
+                        )
+                    }
+                    {/* Forgot Password */}
                     <div className="flex items-center justify-between">
                         <label className="flex items-center text-sm text-gray-600">
                             <input

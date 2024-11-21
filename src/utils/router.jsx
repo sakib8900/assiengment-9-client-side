@@ -7,6 +7,7 @@ import BrandDetail from "../pages/BrandDetail";
 import AuthLayout from "../AuthLayout/AuthLayout";
 import Login from "../AuthLayout/Login";
 import Register from "../AuthLayout/Register";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -25,7 +26,9 @@ const router = createBrowserRouter([
             },
             {
                 path: "/details/:_id",
-                element: <BrandDetail></BrandDetail>,
+                element: <PrivateRoute>
+                    <BrandDetail></BrandDetail>
+                </PrivateRoute>,
                 loader: async ({ params }) => {
                     const res = await fetch("/Coupon.json");
                     const data = await res.json();
