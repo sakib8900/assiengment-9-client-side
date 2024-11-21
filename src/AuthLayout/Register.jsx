@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 
@@ -8,7 +8,7 @@ const Register = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
     const { createNewUser, setUser, updateUserProfile } = useContext(AuthContext);
     const [passwordError, setPasswordError] = useState("");
-
+    const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = e.target; // Get the form element
@@ -39,19 +39,23 @@ const Register = () => {
         createNewUser(email, password)
             .then((result) => {
                 const user = result.user;
-                setUser(user);
+                setUser(user); // Set user in context
+                updateUserProfile({ displayName: name, photoURL: photo }) // Update profile
+                    .then(() => {
+                        setUser({ ...user, displayName: name, photoURL: photo }); // Update user state
+                        navigate("/"); // Redirect to home
+                    })
+                    .catch((err) => {
+                        console.error("Profile update error:", err);
+                    });
 
-                // Show success alert
-                toast.success("Registration successfully !")
-
-                // Clear the form
-                form.reset();
+                toast.success("Registration successfully !");
+                form.reset(); // Clear form
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode, errorMessage);
+                console.error("Error creating user:", error.message);
             });
+
     };
 
     const togglePasswordVisibility = () => {
