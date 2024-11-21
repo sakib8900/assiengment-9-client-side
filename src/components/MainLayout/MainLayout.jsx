@@ -6,15 +6,15 @@ const MainLayout = () => {
     return (
         <div className="min-h-screen flex flex-col">
             {/* Header */}
-            <Header />
+            <Header></Header>
 
             {/* Main Content */}
             <div className="w-[90%] md:w-[80%] mx-auto py-10 flex-grow">
-                <Outlet />
+                <Outlet></Outlet>
             </div>
 
             {/* Footer */}
-            <Footer />
+            <Footer></Footer>
         </div>
     );
 };

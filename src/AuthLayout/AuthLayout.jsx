@@ -1,10 +1,10 @@
 import React from 'react';
-import Login from './Login';
+import { Outlet } from 'react-router-dom';
 
 const AuthLayout = () => {
     return (
         <div>
-            <Login></Login>
+            <Outlet></Outlet>
         </div>
     );
 };
