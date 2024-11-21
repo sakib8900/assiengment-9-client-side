@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
 
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg mt-8 border-r-4 border-r-red-500 border-l-4 border-l-red-500">
+      <Helmet>
+                <title>Profile | Coupon project</title>
+            </Helmet>
       <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Your Profile</h1>
       
       {user ? (
