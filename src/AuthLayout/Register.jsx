@@ -39,21 +39,23 @@ const Register = () => {
         createNewUser(email, password)
             .then((result) => {
                 const user = result.user;
-                setUser(user); // Set user in context
-                updateUserProfile({ displayName: name, photoURL: photo }) // Update profile
+                setUser(user);
+                // update profile
+                updateUserProfile({ displayName: name, photoURL: photo })
                     .then(() => {
-                        setUser({ ...user, displayName: name, photoURL: photo }); // Update user state
-                        navigate("/"); // Redirect to home
+                        setUser({ ...user, displayName: name, photoURL: photo });
+                        navigate("/");
                     })
                     .catch((err) => {
-                        console.error("Profile update error:", err);
+                        // console.error("Profile update error:", err);
                     });
 
                 toast.success("Registration successfully !");
-                form.reset(); // Clear form
+                // form clear
+                form.reset();
             })
             .catch((error) => {
-                console.error("Error creating user:", error.message);
+                // console.error("Error creating user:", error.message);
             });
 
     };

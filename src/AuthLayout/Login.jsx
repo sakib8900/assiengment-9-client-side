@@ -9,7 +9,7 @@ const Login = () => {
     const [error , setError] = useState({})
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location);
+
     const [passwordVisible, setPasswordVisible] = useState(false);
 
     const handleSubmit = (e) => {
@@ -19,7 +19,6 @@ const Login = () => {
         const form = new FormData(e.target);
         const email = form.get("email")
         const password = form.get("password")
-        console.log({email, password});
         userLogin(email, password)
         .then((result) =>{
             const user = result.user;
@@ -100,6 +99,12 @@ const Login = () => {
                         className="w-full py-2 text-white bg-gradient-to-r from-pink-500 to-red-500 rounded-lg hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
                     >
                         Login
+                    </button>
+                    <button
+                        type="submit"
+                        className="w-full py-2 text-white bg-gradient-to-r from-pink-500 to-red-500 rounded-lg hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+                    >
+                        Login with google
                     </button>
                 </form>
                 {/* Register Link */}

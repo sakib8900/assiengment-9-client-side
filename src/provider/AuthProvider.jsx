@@ -6,7 +6,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
-  updateProfile, // Correctly import updateProfile
+  updateProfile,
 } from "firebase/auth";
 
 export const AuthContext = createContext();
@@ -32,7 +32,7 @@ const AuthProvider = ({ children }) => {
   // Update user profile
   const updateUserProfile = (updatedData) => {
     if (auth.currentUser) {
-      return updateProfile(auth.currentUser, updatedData); // Correct usage
+      return updateProfile(auth.currentUser, updatedData);
     }
     return Promise.reject(new Error("No user is logged in."));
   };

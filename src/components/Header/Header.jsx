@@ -30,7 +30,7 @@ const Header = () => {
                 </div>                 
                 <Link to="/" className="btn btn-ghost font-bold text-2xl animate-bounce text-red-500">Discount Pro</Link>
 
-                {/* Show welcome message if the user is logged in */}
+                {/* Show welcome sms */}
                 {user?.email && (
                     <p className="hidden md:block ml-3 text-xl text-gray-600">Welcome: {user?.displayName || "User"}</p>
                 )}
