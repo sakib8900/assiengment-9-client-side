@@ -44,11 +44,11 @@ const Header = () => {
                 <div>                     
                     {user?.email ? (                         
                         <div className="flex items-center gap-2">                             
-                            <img src={user?.photoURL || userIcon} alt="User Avatar" className="w-8 h-8 rounded-full" />                             
+                            <img src={user?.photoURL || userIcon} alt="" className="w-8 h-8 rounded-full" />                             
                             <p>{user?.displayName || "Anonymous User"}</p>                         
                         </div>                     
                     ) : (                         
-                        <img src={userIcon} alt="Default User Icon" className="w-8 h-8 rounded-full" />                     
+                        <img src={userIcon} alt="" className="w-8 h-8 rounded-full" />                     
                     )}                 
                 </div>                  
                 <div>                     

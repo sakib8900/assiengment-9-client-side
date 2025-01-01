@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { Helmet } from 'react-helmet';
-
+import userIcon from "../assets/user.png"
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
 
@@ -17,8 +17,8 @@ const MyProfile = () => {
           {/*  Image */}
           <div className="flex justify-center lg:w-1/3">
             <img
-              src={user.photoURL || "https://via.placeholder.com/150"}
-              alt="User Avatar"
+              src={user.photoURL || userIcon}
+              alt=""
               className="w-32 h-32 lg:w-48 lg:h-48 rounded-full border-4 border-red-600"
             />
           </div>

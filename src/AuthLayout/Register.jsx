@@ -11,7 +11,7 @@ const Register = () => {
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault();
-        const form = e.target; // Get the form element
+        const form = e.target;
         const formData = new FormData(form);
         const name = formData.get("name");
         const email = formData.get("email");

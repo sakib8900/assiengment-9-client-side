@@ -34,7 +34,6 @@ const AuthProvider = ({ children }) => {
     if (auth.currentUser) {
       return updateProfile(auth.currentUser, updatedData);
     }
-    return Promise.reject(new Error("No user is logged in."));
   };
 
   // Logout user
